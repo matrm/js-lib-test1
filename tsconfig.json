@@ -1,14 +1,22 @@
 {
 	"compilerOptions": {
-		"target": "ES2022",
-		"module": "ES2022",
+		"moduleResolution": "NodeNext",
+		"target": "ESNext",
+		"module": "NodeNext",
 		"outDir": "./dist",
-		"declaration": true
+		"declaration": true,
+		"sourceMap": true,
+		"strict": true
 	},
 	"include": [
 		"src/**/*"
 	],
 	"exclude": [
 		"./node_modules"
-	]
+	],
+	"typedocOptions": {
+		"entryPoints": ["src/index.ts"],
+		"out": "docs",
+		"disableSources": true
+	}
 }
